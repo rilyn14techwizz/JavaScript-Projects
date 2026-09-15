@@ -1,0 +1,128 @@
+body {
+	background-color: #2f4f2f;
+}
+
+h1 {
+	font-family: Helvetica;
+	color: white;
+	text-align: center;
+}
+h3 {
+	font-family: Arial;
+	color: snow;
+}
+
+div {
+	color: lightyellow;
+    font-family: Monospace;
+}
+#menuBG {
+	width: 900px;
+	height:auto;
+	margin:10px auto;
+	}
+
+#frmMenu {
+	width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+	}
+
+#totalPrice {
+	width: 100px;
+	margin:20px auto;
+    text-align: center;
+	color: white;
+	}
+
+    .menu, .left, .center, .right, .far-right { 
+    float:none;
+    position: static;
+	flex: 1;
+    min-width: 170px;
+    margin: 10px;
+    box-sizing: border-box;
+	}
+		
+#cart {
+	top:0;margin:0px auto;
+	width:400px;
+	height:200px;
+    }
+	
+#btnOrder {
+	margin:25px auto;
+	width: auto;
+    min-width: 150px;
+	height:40px;
+	display: block;
+	padding: 0 15px;
+	}
+
+    /*Forces the form container to layout column side-by-side*/
+    #frmMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /*Ensures each column has a clean, separate width constraint*/
+    .menu{
+        flex: 1;
+        min-width: 180px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    /*Gallery Layout*/
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .gallery-img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .gallery-img:hover{
+        transform:scale(1.05);
+    }
+
+    /*Lightbox Modal Overlay*/
+    .modal{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    .modal-content{
+        max-width: 85%;
+        max-height: 85%;
+        border-radius: 4px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    .close-btn{
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color:#ffff;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+    }

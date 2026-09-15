@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pizza Drill Demo</title>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<link rel = "stylesheet"   type = "text/css" href="./Pizza_CSS/Pizza.css"/>
+
+	</head>
+	<body>
+		<div id="menuBG">
+            <!--Pizza Gallery Section-->
+            <div class="gallery">
+                <img src="Images/Classic.jpg" alt="Classic Pizza" class="gallery-img">
+                <img src="Images/Hawaiian.jpg" alt="Hawaiian Pizza" class="gallery-img">
+                <img src="Images/Margherita.jpg" alt="Margherita" class="gallery-img">
+                <img src="Images/Eggs.jpg" alt="Eggs" class="gallery-img">
+                <img src="Images/Nacho.jpg" alt="Nacho" class="gallery-img">
+                <img src="Images/Double cheese.jpg" alt="Double cheese" class="gallery-img">
+                <img src="Images/Pineapple.jpg" alt="Pineapple" class="gallery-img">
+            </div>
+			<h1 id="pizzaHeader>Pizza Palace</h1>
+				value="Place Your Order">
+			<form id="frmMenu">
+                <!--COLUMN 1: SIZE-->
+				<div class="menu-column">
+					<h2>Size:</h2 >
+					<input class="size" type="radio" name="Size" id="sizePersonal" value="Custom Pizza">
+                    <label for="sizePersonal">Personal pizza</label><br>
+
+					<input class="size" type="radio" name="Size" id="sizeSmall" value="Small Pizza">
+                    <label for="sizeSmall">Small Pizza</label><br>
+
+					<input class="size" type="radio" name="Size" id="sizeMedium" value="Medium Pizza">
+                    <label for="sizeMedium">Medium Pizza</label><br>
+
+					<input class="size" type="radio" name="Size" id="sizeLarge" value="Large Pizza" checked>
+                    <label for="sizeLarge">Large Pizza</label><br>
+
+					<input class="size" type="radio" name="Size" id="sizeXL" value="Extra Large Pizza">
+                    <label for="sizeXL">Extra Large Pizza</label><br>
+				</div>
+
+                <!--COLUMN2:VEGETABLES-->
+                      <div class="menu column">
+		  			    <h3>Vegetables:</h3>
+					      <input class="vegetables" type="checkbox" name="Topping" id="vegMushrooms" value="Mushrooms">
+                          <label for="vegMushrooms">Mushrooms</label><br>
+
+					      <input class="vegetables" type="checkbox" name="Topping" id="vegOnions" value="Onions">
+                          <label for="vegOnions">Red Onions</label><br>
+
+					      <input class="vegetables" type="checkbox" name="Topping" id="vegTomatoes" value="Tomatoes">
+                          <label for="vegTomatoes">Tomatoes</label><br>
+
+					      <input class="vegetables" type="checkbox" name="Topping" id="vegOlives" value="Olives">
+                          <label for="vegOlives">Olives</label><br>
+
+					      <input class="vegetables" type="checkbox" name="Topping" id="vegGreenPeppers" value="Green Peppers">
+                          <label class="vegGreenPeppers" for="vegGreenPeppers">Green Pepppers</label><br>
+
+                          <input class="vegetables" type="checkbox" name="Topping" id="vegBasilPesto" value="Basil pesto">
+                          <label class="vegBasilPesto" for="vegBasilPesto">Basil Pesto</label><br>
+				      </div>
+
+                        <!--COLUMN3: MEATS-->
+      				  <div class="menu column">
+		      			<h3>Meats:</h3>
+			      	      <input class="meats" type="checkbox" name="Topping" id="meatPepperoni" value="Pepperoni">
+                          <label for="meatPepperoni">Pepperoni</label><br>
+
+				      	  <input class="meats" type="checkbox" name="Topping" id="meatItalianSausage" value="Italian Sausage">
+                          <label for="meatItalianSausage">Italian Sausage</label><br>
+
+				      	  <input class="meats" type="checkbox" name="Topping" id="meatCanadianBacon" value="Canadian Bacon"> 
+                          <label for="meatCanadianBacon">Canadian Bacon</label><br>
+
+	      				  <input class="meats" type="checkbox" name="Topping" id="meatGroundBeef" value="Ground Beef">
+                          <label for="meatGroundBeef">GroundBeef</label><br>
+
+			      		  <input class="meats" type="checkbox" name="Topping" id="meatAnchovy" value="Anchovy">
+                          <label for="meatAnchovy">Anchovy</label><br>
+
+				      	  <input class="meats" type="checkbox" name="Topping" id="meatBuffaloChicken" value="Buffalo Chicken">
+                          <label for="meatBuffaloChicken">Buffalo Chicken</label><br>
+
+      					  <input class="meats" type="checkbox" name="Topping" id="meatSalami" value="Salami">
+                          <label for="meatSalami">Salami</label><br>
+					</div>
+
+                    <!--COLUMN4:OTHERS-->
+                    <div class="menu column">
+		      			<h4>Others:</h4>
+			      	      <input class="toppings" type="checkbox" name="Topping" id="otherEggs" value="Eggs">
+                          <label for="otherEggs">Eggs</label><br>
+
+				      	  <input class="toppings" type="checkbox" name="Topping" id="otherClassic" value="Classic">
+                          <label for="otherClassic">Classic</label><br>
+
+				      	  <input class="toppings" type="checkbox" name="Topping" id="otherHawaiian" value="Hawaiian">
+                          <label for="otherHawaiian">Hawaiian</label><br>
+
+	      				  <input class="toppings" type="checkbox" name="Topping" id="otherMargherita" value="Margherita"> 
+                          <label for="otherMargherita">Margherita</label><br> 
+
+			      		  <input class="toppings" type="checkbox" name="Topping" id="otherPineapple" value="Pineappple">
+                          <label for="otherPineapple">Pineapple</label><br>
+
+				      	  <input class="toppings" type="checkbox" name="Topping" id="otherNacho" value="Nacho">
+                          <label for="otherNacho">Nacho</label><br>
+
+      					  <input class="toppings" type="checkbox" name="Topping" id="otherDoubleCheese" value="Double cheese">
+                          <label for="otherDoubleCheese">Double Cheese</label><br>
+			        </form>
+        <!--The Button and Receipt Area-->
+        <div id="controls">
+            <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Your Order">
+        </div>
+
+        <!--Unified Cart Display Area-->
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+                <!--ADD THIS LINE FOR YOUR TIME DISPLAY-->
+                    <div id="orderTime"></div>
+            </div>
+
+            <!--Script must be at the very bottom, right before body closes-->
+            <script src="Pizza_JavaScript/Pizza.js"></script>
+        </div>
+
+<!--Hidden Lightbox Modal-->
+<div id="lightbox" class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Pizza Order Detail">
+</div>
+</body>
+</html>
