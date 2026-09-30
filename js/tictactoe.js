@@ -4,7 +4,7 @@
 let activeplayer = 'X';
 
 //Array to store moves - use this to determine win conditions
-let selectedsquares =[];
+let selectedSquares =[];
 
 //Function to place x or o in a square
 function placeXOrO(squarenumber) {
@@ -26,12 +26,12 @@ function placeXOrO(squarenumber) {
         if (activeplayer ==='X') {
             activeplayer = 'O';
         } else {
-            activePlayer = 'X';
+            activeplayer = 'X';
         }
         //Function to play the placement sound
         new Audio('./media/place.wav').play();
         //Checks if it is the computers turn
-        if (activePlayer === 'o') {
+        if (activeplayer === 'O') {
             disableClick();
             setTimeout(function () { computersTurn(); }, 1000);
         }
@@ -55,7 +55,7 @@ function computersTurn() {
 
 //This function parses the selectedSquares array to determine if a player has won
 //The drawline function is called if a win condition is met
-function checkWinConditios() {
+function checkWinConditions() {
     if (arrayIncludes('OX', '1X', '2X')) { drawWinLine(50, 100, 558, 100); }
     else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304); }
     else if (arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508); }
@@ -75,7 +75,7 @@ function checkWinConditios() {
     //checks foe a tie  - if no win condition are met and 9 squares have been selected
     else if (selectedSquares.length >= 9) {
         //plays the tie sound 
-        audio('./media /tie.mp3');
+        audio('./media/tie.mp3');
         //resets the game after a tie 
         setTimeout(function () { resetGame(); }, 500);
     }
@@ -99,13 +99,13 @@ function resetGame() {
 }
 
 //Plays the audio files 
-function audio(audioURl) {
+function audio(audioURL) {
     let audio = new Audio(audioURL);
     audio.play();
 }
 
 //Function to draw the line across winning coordinates
-function drawLine(coordX1, coordY1, coordX2, coordY2) {
+function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     const canvas = document.getElementById('win-lines');
     const c = canvas.getContext('2d');
     let x1 = coordX1,
@@ -126,7 +126,7 @@ function drawLine(coordX1, coordY1, coordX2, coordY2) {
         if (x1 <= x2 && y1 <=y2) {
             if(x < x2) { x += 10; }
             if(y < y2) { y += 10; }
-            if (x >= x2 && y <= y2) {cancelAnimationFrame(animationloop); }
+            if (x >= x2 && y <= y2) {cancelAnimationFrame(animationLoop); }
         }
     }
     //Clears the board after the animation
