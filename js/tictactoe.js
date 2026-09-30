@@ -1,35 +1,35 @@
 //tictactoe.js
 
 //Variable to keep track of whose turn it is}
-let active player = 'X';
+let activeplayer = 'X';
 
 //Array to store moves - use this to determine win conditions
-let selected squares =[];
+let selectedsquares =[];
 
 //Function to place x or o in a square
-function place XOrO(square number) {
+function placeXOrO(squarenumber) {
     //checks if the square has benn selected already
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         //Variable to hold the HTML element that was clicked
         let select = document.getElementById(squareNumber);
         //Detetrmines the active player and player and places icon
-        if (active player === 'X') {
+        if (activeplayer === 'X') {
             select.style.backgroundImage = 'url("images/x.png")';
         } else{
             select.style.backgroundImage = 'url("images/o.png")';
         }
         //Adds the square number and player to the array
-        selectedSquares.push(squareNumber + active player);
+        selectedSquares.push(squareNumber + activeplayer);
         //Calls the function to check for a win 
         checkWinConditions();
         //Changes the active player
-        if (active player ==='X') {
-            active player = 'O';
+        if (activeplayer ==='X') {
+            activeplayer = 'O';
         } else {
             activePlayer = 'X';
         }
         //Function to play the placement sound
-        audio('./media/place.mp3');
+        new Audio('./media/place.wav').play();
         //Checks if it is the computers turn
         if (activePlayer === 'o') {
             disableClick();
